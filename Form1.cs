@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace BookShop_HAU_KSV
 {
-    public partial class Form1 : Form
+    public partial class FormLogin_HAU_KSV : Form
     {
-        public Form1()
+        public FormLogin_HAU_KSV()
         {
             InitializeComponent();
+        }
+
+        private void ViewProdBut_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

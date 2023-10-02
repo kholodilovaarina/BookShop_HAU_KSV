@@ -1,7 +1,7 @@
 ﻿
 namespace BookShop_HAU_KSV
 {
-    partial class Form1
+    partial class FormLogin_HAU_KSV
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,56 +29,56 @@ namespace BookShop_HAU_KSV
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ViewProdBut = new System.Windows.Forms.Button();
+            this.LogBut = new System.Windows.Forms.Button();
+            this.SignBut = new System.Windows.Forms.Button();
+            this.TB_Login = new System.Windows.Forms.TextBox();
+            this.TB_Password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // ViewProdBut
             // 
-            this.button1.Location = new System.Drawing.Point(92, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Просмотр товаров";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ViewProdBut.Location = new System.Drawing.Point(92, 24);
+            this.ViewProdBut.Name = "ViewProdBut";
+            this.ViewProdBut.Size = new System.Drawing.Size(183, 23);
+            this.ViewProdBut.TabIndex = 0;
+            this.ViewProdBut.Text = "Просмотр товаров";
+            this.ViewProdBut.UseVisualStyleBackColor = true;
+            this.ViewProdBut.Click += new System.EventHandler(this.ViewProdBut_Click);
             // 
-            // button2
+            // LogBut
             // 
-            this.button2.Location = new System.Drawing.Point(148, 302);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Вход";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LogBut.Location = new System.Drawing.Point(148, 302);
+            this.LogBut.Name = "LogBut";
+            this.LogBut.Size = new System.Drawing.Size(75, 23);
+            this.LogBut.TabIndex = 1;
+            this.LogBut.Text = "Вход";
+            this.LogBut.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // SignBut
             // 
-            this.button3.Location = new System.Drawing.Point(140, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Регистрация";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SignBut.Location = new System.Drawing.Point(140, 331);
+            this.SignBut.Name = "SignBut";
+            this.SignBut.Size = new System.Drawing.Size(89, 23);
+            this.SignBut.TabIndex = 2;
+            this.SignBut.Text = "Регистрация";
+            this.SignBut.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // TB_Login
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 3;
+            this.TB_Login.Location = new System.Drawing.Point(92, 130);
+            this.TB_Login.Name = "TB_Login";
+            this.TB_Login.Size = new System.Drawing.Size(183, 20);
+            this.TB_Login.TabIndex = 3;
             // 
-            // textBox2
+            // TB_Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 226);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 4;
+            this.TB_Password.Location = new System.Drawing.Point(92, 226);
+            this.TB_Password.Name = "TB_Password";
+            this.TB_Password.Size = new System.Drawing.Size(183, 20);
+            this.TB_Password.TabIndex = 4;
             // 
             // label1
             // 
@@ -98,29 +98,19 @@ namespace BookShop_HAU_KSV
             this.label2.TabIndex = 6;
             this.label2.Text = "Пароль";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "првиета яч семко авы";
-            // 
-            // Form1
+            // FormLogin_HAU_KSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 376);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.TB_Password);
+            this.Controls.Add(this.TB_Login);
+            this.Controls.Add(this.SignBut);
+            this.Controls.Add(this.LogBut);
+            this.Controls.Add(this.ViewProdBut);
+            this.Name = "FormLogin_HAU_KSV";
             this.Text = "Вход";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,14 +119,13 @@ namespace BookShop_HAU_KSV
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button ViewProdBut;
+        private System.Windows.Forms.Button LogBut;
+        private System.Windows.Forms.Button SignBut;
+        private System.Windows.Forms.TextBox TB_Login;
+        private System.Windows.Forms.TextBox TB_Password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
 

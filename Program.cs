@@ -16,7 +16,7 @@ namespace BookShop_HAU_KSV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormLogin_HAU_KSV());
         }
     }
 }

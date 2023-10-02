@@ -32,5 +32,15 @@ namespace BookShop_HAU_KSV.Properties {
                 return ((string)(this["EquipmentRepairConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=U43-03;Initial Catalog=BookShop;Integrated Security=True")]
+        public string BookShopConnectionString {
+            get {
+                return ((string)(this["BookShopConnectionString"]));
+            }
+        }
     }
 }

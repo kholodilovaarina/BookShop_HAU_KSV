@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +89,17 @@
     <EmbeddedResource Include="ViewOrder_HAU_KSV.resx">
       <DependentUpon>ViewOrder_HAU_KSV.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BookShopDataSet.xsc">
+      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSet.xss">
+      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
