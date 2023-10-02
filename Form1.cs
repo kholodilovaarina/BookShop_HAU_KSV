@@ -25,16 +25,6 @@ namespace BookShop_HAU_KSV
             Dialog.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormLogin_HAU_KSV_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             //string connectionString = "Data Source=U43-03;Initial Catalog=BookShop;Integrated Security=True";
