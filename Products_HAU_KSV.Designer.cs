@@ -39,10 +39,11 @@ namespace BookShop_HAU_KSV
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip_Products = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьКЗаказуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BasketBut = new System.Windows.Forms.Button();
             this.bookShopDataSet = new BookShop_HAU_KSV.BookShopDataSet();
             this.тОВАРTableAdapter = new BookShop_HAU_KSV.BookShopDataSetTableAdapters.ТОВАРTableAdapter();
             this.tableAdapterManager = new BookShop_HAU_KSV.BookShopDataSetTableAdapters.TableAdapterManager();
+            this.ButDel = new System.Windows.Forms.Button();
             this.contextMenuStrip_Products.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookShopDataSet)).BeginInit();
             this.SuspendLayout();
@@ -110,14 +111,14 @@ namespace BookShop_HAU_KSV
             this.добавитьКЗаказуToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.добавитьКЗаказуToolStripMenuItem.Text = "Добавить к заказу";
             // 
-            // button1
+            // BasketBut
             // 
-            this.button1.Location = new System.Drawing.Point(926, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 32);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Корзина";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BasketBut.Location = new System.Drawing.Point(926, 12);
+            this.BasketBut.Name = "BasketBut";
+            this.BasketBut.Size = new System.Drawing.Size(67, 32);
+            this.BasketBut.TabIndex = 2;
+            this.BasketBut.Text = "Корзина";
+            this.BasketBut.UseVisualStyleBackColor = true;
             // 
             // bookShopDataSet
             // 
@@ -142,12 +143,23 @@ namespace BookShop_HAU_KSV
             this.tableAdapterManager.СТАТУСTableAdapter = null;
             this.tableAdapterManager.ТОВАРTableAdapter = this.тОВАРTableAdapter;
             // 
+            // ButDel
+            // 
+            this.ButDel.Location = new System.Drawing.Point(13, 13);
+            this.ButDel.Name = "ButDel";
+            this.ButDel.Size = new System.Drawing.Size(118, 23);
+            this.ButDel.TabIndex = 3;
+            this.ButDel.Text = "Удалить";
+            this.ButDel.UseVisualStyleBackColor = true;
+            this.ButDel.Click += new System.EventHandler(this.ButDel_Click);
+            // 
             // Products_HAU_KSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 453);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ButDel);
+            this.Controls.Add(this.BasketBut);
             this.Controls.Add(this.listView_Products);
             this.Name = "Products_HAU_KSV";
             this.Text = "ООО \"Книжный клуб\" - Товары";
@@ -169,9 +181,10 @@ namespace BookShop_HAU_KSV
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_Products;
         private System.Windows.Forms.ToolStripMenuItem добавитьКЗаказуToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BasketBut;
         private BookShopDataSet bookShopDataSet;
         private BookShopDataSetTableAdapters.ТОВАРTableAdapter тОВАРTableAdapter;
         private BookShopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button ButDel;
     }
 }

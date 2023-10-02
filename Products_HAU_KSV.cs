@@ -12,6 +12,7 @@ namespace BookShop_HAU_KSV
 {
     public partial class Products_HAU_KSV : Form
     {
+        ListViewItem LastSelectedItem;
         public Products_HAU_KSV()
         {
             InitializeComponent();
@@ -38,6 +39,25 @@ namespace BookShop_HAU_KSV
                 it.SubItems.AddRange(items);
                 listView_Products.Items.Add(it);
             }
+        }
+
+        private void ButDel_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem Item in listView_Products.SelectedItems)
+            {
+                DataRow Row = bookShopDataSet.ТОВАР.Select($"Номер_товара = '{ Item.Text}'")[0];
+                DataRow[] TempRows = Row.GetChildRows("FK_СОСТАВ_ЗАКАЗА_ТОВАР");
+
+                if (TempRows.Length != 0)
+                {
+                    MessageBox.Show("На этот товар уже есть заказ.\nЕго невозможно удалить.", "Удаление товара", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return;
+                }
+                Item.Remove();
+                Row.Delete();
+            }
+            тОВАРTableAdapter.Update(bookShopDataSet.ТОВАР);
+            тОВАРTableAdapter.Fill(bookShopDataSet.ТОВАР);
         }
     }
 }
