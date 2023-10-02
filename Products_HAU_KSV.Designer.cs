@@ -31,16 +31,20 @@ namespace BookShop_HAU_KSV
         {
             this.components = new System.ComponentModel.Container();
             this.listView_Products = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip_Products = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьКЗаказуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.bookShopDataSet = new BookShop_HAU_KSV.BookShopDataSet();
+            this.тОВАРTableAdapter = new BookShop_HAU_KSV.BookShopDataSetTableAdapters.ТОВАРTableAdapter();
+            this.tableAdapterManager = new BookShop_HAU_KSV.BookShopDataSetTableAdapters.TableAdapterManager();
             this.contextMenuStrip_Products.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookShopDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // listView_Products
@@ -62,6 +66,11 @@ namespace BookShop_HAU_KSV
             this.listView_Products.TabIndex = 0;
             this.listView_Products.UseCompatibleStateImageBehavior = false;
             this.listView_Products.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Номер";
+            this.columnHeader6.Width = 1;
             // 
             // columnHeader1
             // 
@@ -88,11 +97,6 @@ namespace BookShop_HAU_KSV
             this.columnHeader5.Text = "Описание";
             this.columnHeader5.Width = 367;
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Номер";
-            this.columnHeader6.Width = 1;
-            // 
             // contextMenuStrip_Products
             // 
             this.contextMenuStrip_Products.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -110,21 +114,46 @@ namespace BookShop_HAU_KSV
             // 
             this.button1.Location = new System.Drawing.Point(926, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 32);
+            this.button1.Size = new System.Drawing.Size(67, 32);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "Корзина";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // bookShopDataSet
+            // 
+            this.bookShopDataSet.DataSetName = "BookShopDataSet";
+            this.bookShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // тОВАРTableAdapter
+            // 
+            this.тОВАРTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = BookShop_HAU_KSV.BookShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ЗАКАЗTableAdapter = null;
+            this.tableAdapterManager.КЛИЕНТTableAdapter = null;
+            this.tableAdapterManager.ПУНКТ_ВЫДАЧИTableAdapter = null;
+            this.tableAdapterManager.РОЛЬTableAdapter = null;
+            this.tableAdapterManager.СКЛАДTableAdapter = null;
+            this.tableAdapterManager.СОСТАВ_ЗАКАЗАTableAdapter = null;
+            this.tableAdapterManager.СОТРУДНИКTableAdapter = null;
+            this.tableAdapterManager.СТАТУСTableAdapter = null;
+            this.tableAdapterManager.ТОВАРTableAdapter = this.тОВАРTableAdapter;
             // 
             // Products_HAU_KSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 450);
+            this.ClientSize = new System.Drawing.Size(1053, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView_Products);
             this.Name = "Products_HAU_KSV";
             this.Text = "ООО \"Книжный клуб\" - Товары";
+            this.Load += new System.EventHandler(this.Products_HAU_KSV_Load);
             this.contextMenuStrip_Products.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bookShopDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,5 +170,8 @@ namespace BookShop_HAU_KSV
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_Products;
         private System.Windows.Forms.ToolStripMenuItem добавитьКЗаказуToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private BookShopDataSet bookShopDataSet;
+        private BookShopDataSetTableAdapters.ТОВАРTableAdapter тОВАРTableAdapter;
+        private BookShopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

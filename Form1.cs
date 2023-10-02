@@ -19,7 +19,8 @@ namespace BookShop_HAU_KSV
 
         private void ViewProdBut_Click(object sender, EventArgs e)
         {
-
+            Products_HAU_KSV Dialog = new Products_HAU_KSV();
+            Dialog.Show();
         }
     }
 }
