@@ -29,56 +29,57 @@ namespace BookShop_HAU_KSV
         /// </summary>
         private void InitializeComponent()
         {
-            this.ViewProdBut = new System.Windows.Forms.Button();
-            this.LogBut = new System.Windows.Forms.Button();
-            this.SignBut = new System.Windows.Forms.Button();
-            this.TB_Login = new System.Windows.Forms.TextBox();
-            this.TB_Password = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ViewProdBut
+            // button1
             // 
-            this.ViewProdBut.Location = new System.Drawing.Point(92, 24);
-            this.ViewProdBut.Name = "ViewProdBut";
-            this.ViewProdBut.Size = new System.Drawing.Size(183, 23);
-            this.ViewProdBut.TabIndex = 0;
-            this.ViewProdBut.Text = "Просмотр товаров";
-            this.ViewProdBut.UseVisualStyleBackColor = true;
-            this.ViewProdBut.Click += new System.EventHandler(this.ViewProdBut_Click);
+            this.button1.Location = new System.Drawing.Point(92, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(183, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Просмотр товаров";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // LogBut
+            // button2
             // 
-            this.LogBut.Location = new System.Drawing.Point(148, 302);
-            this.LogBut.Name = "LogBut";
-            this.LogBut.Size = new System.Drawing.Size(75, 23);
-            this.LogBut.TabIndex = 1;
-            this.LogBut.Text = "Вход";
-            this.LogBut.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(148, 302);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Вход";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // SignBut
+            // button3
             // 
-            this.SignBut.Location = new System.Drawing.Point(140, 331);
-            this.SignBut.Name = "SignBut";
-            this.SignBut.Size = new System.Drawing.Size(89, 23);
-            this.SignBut.TabIndex = 2;
-            this.SignBut.Text = "Регистрация";
-            this.SignBut.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(140, 331);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Регистрация";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // TB_Login
+            // textBox1
             // 
-            this.TB_Login.Location = new System.Drawing.Point(92, 130);
-            this.TB_Login.Name = "TB_Login";
-            this.TB_Login.Size = new System.Drawing.Size(183, 20);
-            this.TB_Login.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(92, 130);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(183, 20);
+            this.textBox1.TabIndex = 3;
             // 
-            // TB_Password
+            // textBox2
             // 
-            this.TB_Password.Location = new System.Drawing.Point(92, 226);
-            this.TB_Password.Name = "TB_Password";
-            this.TB_Password.Size = new System.Drawing.Size(183, 20);
-            this.TB_Password.TabIndex = 4;
+            this.textBox2.Location = new System.Drawing.Point(92, 226);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(183, 20);
+            this.textBox2.TabIndex = 4;
             // 
             // label1
             // 
@@ -105,13 +106,14 @@ namespace BookShop_HAU_KSV
             this.ClientSize = new System.Drawing.Size(371, 376);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TB_Password);
-            this.Controls.Add(this.TB_Login);
-            this.Controls.Add(this.SignBut);
-            this.Controls.Add(this.LogBut);
-            this.Controls.Add(this.ViewProdBut);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Name = "FormLogin_HAU_KSV";
             this.Text = "Вход";
+            this.Load += new System.EventHandler(this.FormLogin_HAU_KSV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,11 +121,11 @@ namespace BookShop_HAU_KSV
 
         #endregion
 
-        private System.Windows.Forms.Button ViewProdBut;
-        private System.Windows.Forms.Button LogBut;
-        private System.Windows.Forms.Button SignBut;
-        private System.Windows.Forms.TextBox TB_Login;
-        private System.Windows.Forms.TextBox TB_Password;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
