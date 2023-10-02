@@ -38,7 +38,6 @@ namespace BookShop_HAU_KSV
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@ namespace BookShop_HAU_KSV
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -64,9 +64,9 @@ namespace BookShop_HAU_KSV
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -78,6 +78,7 @@ namespace BookShop_HAU_KSV
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(295, 30);
             this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
             this.numericUpDown1.Size = new System.Drawing.Size(37, 20);
             this.numericUpDown1.TabIndex = 0;
             // 
@@ -85,8 +86,10 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox1.Location = new System.Drawing.Point(23, 30);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(254, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -100,15 +103,19 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox2.Location = new System.Drawing.Point(23, 68);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(23, 107);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(175, 20);
             this.textBox3.TabIndex = 4;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // comboBox1
             // 
@@ -117,6 +124,7 @@ namespace BookShop_HAU_KSV
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 21);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // listBox1
             // 
@@ -147,20 +155,6 @@ namespace BookShop_HAU_KSV
             this.panel2.Size = new System.Drawing.Size(327, 255);
             this.panel2.TabIndex = 8;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.listBox3);
-            this.panel3.Controls.Add(this.comboBox3);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox8);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.textBox9);
-            this.panel3.Controls.Add(this.numericUpDown3);
-            this.panel3.Location = new System.Drawing.Point(12, 273);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(327, 255);
-            this.panel3.TabIndex = 9;
-            // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
@@ -181,15 +175,19 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox4.Location = new System.Drawing.Point(9, 92);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(175, 20);
             this.textBox4.TabIndex = 11;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(9, 53);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 10;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // pictureBox2
             // 
@@ -203,15 +201,32 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox6.Location = new System.Drawing.Point(9, 15);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(254, 20);
             this.textBox6.TabIndex = 8;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(281, 15);
             this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.ReadOnly = true;
             this.numericUpDown2.Size = new System.Drawing.Size(37, 20);
             this.numericUpDown2.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.listBox3);
+            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.textBox8);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.textBox9);
+            this.panel3.Controls.Add(this.numericUpDown3);
+            this.panel3.Location = new System.Drawing.Point(12, 273);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(327, 255);
+            this.panel3.TabIndex = 9;
             // 
             // listBox3
             // 
@@ -233,15 +248,19 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox7.Location = new System.Drawing.Point(9, 92);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(175, 20);
             this.textBox7.TabIndex = 11;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(9, 53);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 10;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // pictureBox3
             // 
@@ -255,13 +274,16 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox9.Location = new System.Drawing.Point(9, 15);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(254, 20);
             this.textBox9.TabIndex = 8;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // numericUpDown3
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(281, 15);
             this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.ReadOnly = true;
             this.numericUpDown3.Size = new System.Drawing.Size(37, 20);
             this.numericUpDown3.TabIndex = 7;
             // 
@@ -299,15 +321,19 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox10.Location = new System.Drawing.Point(9, 92);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(175, 20);
             this.textBox10.TabIndex = 11;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(9, 53);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(100, 20);
             this.textBox11.TabIndex = 10;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // pictureBox4
             // 
@@ -321,13 +347,16 @@ namespace BookShop_HAU_KSV
             // 
             this.textBox12.Location = new System.Drawing.Point(9, 15);
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(254, 20);
             this.textBox12.TabIndex = 8;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // numericUpDown4
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(281, 15);
             this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.ReadOnly = true;
             this.numericUpDown4.Size = new System.Drawing.Size(37, 20);
             this.numericUpDown4.TabIndex = 7;
             // 
@@ -353,10 +382,10 @@ namespace BookShop_HAU_KSV
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.panel4.ResumeLayout(false);

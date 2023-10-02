@@ -46,7 +46,7 @@ namespace BookShop_HAU_KSV
             this.button1.TabIndex = 0;
             this.button1.Text = "Просмотр товаров";
             this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -113,7 +113,6 @@ namespace BookShop_HAU_KSV
             this.Controls.Add(this.button1);
             this.Name = "FormLogin_HAU_KSV";
             this.Text = "Вход";
-            //this.Load += new System.EventHandler(this.FormLogin_HAU_KSV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

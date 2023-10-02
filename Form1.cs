@@ -49,7 +49,12 @@ namespace BookShop_HAU_KSV
                         MessageBox.Show("Ошибка входа. Проверьте правильность заполнения логина и пароля.");
                     }
                 }
-            }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
         }
     }
 }
