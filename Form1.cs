@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -36,19 +37,16 @@ namespace BookShop_HAU_KSV
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=U43-03;Initial Catalog=BookShop;Integrated Security=True";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string username = textBox1.Text;
-                string password = textBox2.Text;
-
-                string query = "SELECT COUNT(*) FROM СОТРУДНИК, КЛИЕНТ WHERE Логин = @Логин AND Пароль = @Пароль";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Логин", username);
-                    command.Parameters.AddWithValue("@Пароль", password);
-                    int count = (int)command.ExecuteScalar();
+            //string connectionString = "Data Source=U43-03;Initial Catalog=BookShop;Integrated Security=True";
+            //using (SqlConnection connection = new SqlConnection(connectionString))
+            //{
+            //    connection.Open();
+            var cn = new OleDbConnection();
+            cn.ConnectionString = Properties.Settings.Default.BookShopConnectionString;
+            cn.Open();
+            var sql = new OleDbCommand("SELECT COUNT(*) FROM Service WHERE Логин = '" + textBox1.Text + ", Пароль = '" + textBox2.Text + "'", cn); // текст запроса
+            int UserExist = Convert.ToInt32(sql.ExecuteScalar());
+            int count = (int)sql.ExecuteScalar();
 
                     if (count > 0)
                     {
@@ -58,7 +56,7 @@ namespace BookShop_HAU_KSV
                     }
                     else
                     {
-                        MessageBox.Show("Ошибка входа. Проверьте логин и пароль.");
+                        MessageBox.Show("Ошибка входа. Проверьте правильность заполнения логина и пароля.");
                     }
                 }
             }
